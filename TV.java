@@ -62,5 +62,13 @@ public class TV {
 		volume--;
 		System.out.println("ÇöÀç º¼·ý : " + volume);
 	}//uv
+	
+	@Override
+	public String toString() {
+		return "TV [color=" + color + ", producer=" + producer + ", size=" + size + ", channel=" + channel + ", volume="
+				+ volume + "]";
+	}//toSt
 
+	
+	
 }//class TV
