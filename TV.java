@@ -1,74 +1,22 @@
-package test.class1;
+package test.static1;
 
 public class TV {
-	private String color, producer;
-	private int size, channel, volume;
-	
-	public void setColor(String color) {
+	public static String producer;//클래스 변수 ->  공유영역에 단 1번만 할당됨
+	private int size;//인스턴스 변수 -> 객체 생성될 때마다 독립된 멤버로 할당됨
+	private String color;//인스턴스 변수
+		
+	public TV(int size, String color) {
+		this.size = size;
 		this.color = color;
-	}//setCo
-	public String getColor() {
-		return color;
-	}//getCo
-	public String getProducer() {
-		return producer;
-	}//ger P
-	public void setProducer(String producer) {
-		this.producer = producer;
-	}//setP
+	}//생 TV
+
+
 	public int getSize() {
 		return size;
-	}//get S
-	public void setSize(int size) {
-		this.size = size;
-	}//set S
-	public int getChannel() {
-		return channel;
-	}//get Ch
-	public void setChannel(int channel) {
-		this.channel = channel;
-	}//set Ch
-	public int getVolume() {
-		return volume;
-	}//get V
-	public void setVolume(int volume) {
-		this.volume = volume;
-	}//set V
-	
-	public void powerOn() {
-		System.out.println(producer + " TV 전원 켜짐.");
-	}//powerOn
+	}
 
-	public void powerOff() {
-		System.out.println(producer + " TV 전원 꺼짐.");
-	}//poweoff
+	public String getColor() {
+		return color;
+	}
 	
-	public void upChannel() {
-		channel++;
-		System.out.println("현재 채널 :  " + channel + "번");
-	}//uc
-	
-	public void downChannel() {
-		channel--;
-		System.out.println("현재 채널 :  " + channel + "번");
-	}//dc
-	
-	public void upVolume() {
-		volume++;
-		System.out.println("현재 볼륨 : " + volume);
-	}//uv
-	
-	public void downVolume() {
-		volume--;
-		System.out.println("현재 볼륨 : " + volume);
-	}//uv
-	
-	@Override
-	public String toString() {
-		return "TV [color=" + color + ", producer=" + producer + ", size=" + size + ", channel=" + channel + ", volume="
-				+ volume + "]";
-	}//toSt
-
-	
-	
-}//class TV
+}//클 TV
